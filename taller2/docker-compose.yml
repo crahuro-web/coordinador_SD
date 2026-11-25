@@ -21,3 +21,19 @@ services:
       RABBIT_HOST: "100.78.187.12"
       RABBIT_USER: "admin"
       RABBIT_PASS: "admin123"
+
+  agente:
+    build: ./agente
+    container_name: agente_sd
+    restart: unless-stopped
+    network_mode: host
+    depends_on:
+      - coordinador
+      - rabbitmq
+    environment:
+      NODO_ID: "2"
+      COORD_URL: "http://100.78.187.12:8000"
+      RABBIT_HOST: "100.78.187.12"
+      RABBIT_USER: "admin"
+      RABBIT_PASS: "admin123"
+      AUTO_SAGA: "true"

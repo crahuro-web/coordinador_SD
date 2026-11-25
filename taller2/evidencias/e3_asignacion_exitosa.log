@@ -1,0 +1,48 @@
+=== LOGS AGENTE (E3) ===
+[AGENTE 2] Latido/Métrica REST OK -> L:26
+[AGENTE 2] Latido/Métrica REST OK -> L:29
+[AGENTE 2] Latido/Métrica REST OK -> L:32
+[AGENTE 2] Latido/Métrica REST OK -> L:35
+[AGENTE 2] Latido/Métrica REST OK -> L:38
+[AGENTE 2] Latido/Métrica REST OK -> L:41
+[AGENTE 2] Latido/Métrica REST OK -> L:44
+[AGENTE 2] Latido/Métrica REST OK -> L:47
+[AGENTE 2] Latido/Métrica REST OK -> L:50
+[AGENTE 2] Latido/Métrica REST OK -> L:53
+[AGENTE 2] Latido/Métrica REST OK -> L:56
+[AGENTE 2] Latido/Métrica REST OK -> L:59
+[AGENTE 2] Latido/Métrica REST OK -> L:62
+[AGENTE 2] Latido/Métrica REST OK -> L:65
+[AGENTE 2] Latido/Métrica REST OK -> L:68
+[AGENTE 2] Latido/Métrica REST OK -> L:71
+[AGENTE 2] Latido/Métrica REST OK -> L:74
+[AGENTE 2] Latido/Métrica REST OK -> L:77
+[AGENTE 2] Latido/Métrica REST OK -> L:80
+[AGENTE 2] Latido/Métrica REST OK -> L:83
+
+=== LOGS COORDINADOR (E3) ===
+INFO:     100.78.187.12:33986 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:2.1% RAM:42.6% | L:49
+INFO:     100.78.187.12:50120 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:1.0% RAM:42.3% | L:52
+INFO:     100.78.187.12:36708 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:2.1% RAM:42.4% | L:55
+INFO:     100.78.187.12:36584 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:0.0% RAM:42.4% | L:58
+INFO:     100.78.187.12:41946 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:3.1% RAM:42.4% | L:61
+INFO:     100.78.187.12:52912 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:3.1% RAM:42.4% | L:64
+INFO:     100.78.187.12:34480 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:1.0% RAM:42.0% | L:67
+INFO:     100.78.187.12:54354 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:1.0% RAM:42.1% | L:70
+INFO:     100.78.187.12:52882 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:3.1% RAM:42.1% | L:73
+INFO:     100.78.187.12:56172 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:2.0% RAM:42.0% | L:76
+INFO:     100.78.187.12:46560 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:0.0% RAM:42.0% | L:79
+INFO:     100.78.187.12:50146 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:3.1% RAM:42.0% | L:82
+INFO:     100.78.187.12:44528 - "POST /api/v1/metrics HTTP/1.1" 200 OK
