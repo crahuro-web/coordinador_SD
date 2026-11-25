@@ -1,0 +1,49 @@
+=== LOGS COORDINADOR - SAGA CON FALLA Y COMPENSACIÓN (E4) ===
+[REST] Métricas Nodo 2 | CPU:3.1% RAM:41.8% | L:331
+INFO:     100.78.187.12:39126 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:0.0% RAM:41.8% | L:334
+INFO:     100.78.187.12:38106 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:6.1% RAM:41.8% | L:337
+INFO:     100.78.187.12:48578 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:1.0% RAM:41.8% | L:340
+INFO:     100.78.187.12:45038 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:0.0% RAM:41.8% | L:343
+INFO:     100.78.187.12:48598 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:1.0% RAM:42.0% | L:346
+INFO:     100.78.187.12:35562 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:2.1% RAM:42.0% | L:349
+INFO:     100.78.187.12:38308 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:1.0% RAM:42.0% | L:352
+INFO:     100.78.187.12:59398 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:0.0% RAM:42.0% | L:355
+INFO:     100.78.187.12:33284 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+[REST] Métricas Nodo 2 | CPU:4.0% RAM:42.0% | L:358
+INFO:     100.78.187.12:49928 - "POST /api/v1/metrics HTTP/1.1" 200 OK
+
+=== ESTADOS EN MONGODB rs0 (E4) ===
+[
+  {
+    saga_id: '1ebfa921',
+    nodo_origen: 2,
+    recurso: 'gpu_cluster_01',
+    estado: 'COMPLETADA',
+    pasos: [
+      'PASO_1_RESERVA_OK',
+      'PASO_2_REPLICACION_OK',
+      'PASO_3_CONFIRMADA'
+    ],
+    lamport: 3,
+    timestamp: 1795568549.8948984,
+    asignado: true
+  },
+  {
+    saga_id: 'f6467038',
+    nodo_origen: 2,
+    recurso: 'gpu_cluster_02',
+    estado: 'COMPENSADA',
+    pasos: [ 'PASO_1_RESERVA_OK', 'COMPENSACION_PASO_1_LIBERAR_RESERVA' ],
+    lamport: 245,
+    timestamp: 1795569396.4569454,
+    error: 'Fallo simulado en Paso 2 (Replicación BD)'
+  }
+]
