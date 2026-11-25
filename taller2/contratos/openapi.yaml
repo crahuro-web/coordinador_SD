@@ -1,0 +1,40 @@
+openapi: 3.0.3
+info:
+  title: API Coordinador - Sistemas Distribuidos Taller 2
+  version: 1.0.0
+paths:
+  /api/v1/metrics:
+    post:
+      summary: Reporte periódico de métricas de un agente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [nodo_id, cpu_pct, ram_pct, lamport]
+              properties:
+                nodo_id: { type: integer }
+                cpu_pct: { type: number }
+                ram_pct: { type: number }
+                lamport: { type: integer }
+      responses:
+        "200":
+          description: Métricas recibidas y confirmadas
+  /api/v1/assignments:
+    post:
+      summary: Solicitar asignación transaccional (Patrón Saga)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [nodo_origen, recurso, simular_fallo_paso2]
+              properties:
+                nodo_origen: { type: integer }
+                recurso: { type: string }
+                simular_fallo_paso2: { type: boolean, default: false }
+      responses:
+        "200":
+          description: Resultado de la Saga (COMPLETADA o COMPENSADA)

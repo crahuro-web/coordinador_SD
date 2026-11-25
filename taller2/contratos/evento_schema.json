@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EventoDistribuido",
+  "type": "object",
+  "required": ["event_id", "nodo_id", "lamport", "tipo", "payload"],
+  "properties": {
+    "event_id": { "type": "string", "description": "UUID único para idempotencia" },
+    "nodo_id": { "type": "integer", "description": "Identificador del nodo emisor" },
+    "lamport": { "type": "integer", "description": "Marca de tiempo lógica de Lamport" },
+    "tipo": { "type": "string", "enum": ["METRICA", "ASIGNACION", "EVENTO_CONCURRENTE"] },
+    "payload": { "type": "object" }
+  }
+}
